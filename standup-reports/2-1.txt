@@ -1,0 +1,1 @@
+fixing issue where network offline will cause message store to delete messages

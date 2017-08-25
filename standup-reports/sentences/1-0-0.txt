@@ -1,0 +1,1 @@
+added masonryjs to the standup index page.

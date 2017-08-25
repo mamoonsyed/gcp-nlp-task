@@ -1,0 +1,1 @@
+splitting recent message signal into two signals (local and remote recent history).

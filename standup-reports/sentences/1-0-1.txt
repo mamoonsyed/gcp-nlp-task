@@ -1,0 +1,1 @@
+finished all the tests related to the incomingMessage class.

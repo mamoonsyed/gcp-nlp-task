@@ -1,0 +1,1 @@
+Handling handoff situations. sending messages from the watch

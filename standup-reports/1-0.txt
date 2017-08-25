@@ -1,0 +1,1 @@
+added masonryjs to the standup index page. finished all the tests related to the incomingMessage class. Helped jason with some cosmetic defects of the standup index page. Took some pictures of Luna (one of my dogs) for @krystalddouglas.
