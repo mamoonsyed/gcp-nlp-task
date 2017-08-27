@@ -1,19 +1,4 @@
 #!/usr/bin/env python
-
-# Copyright 2017 Google, Inc.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#    http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
 """This application demonstrates how to perform basic operations with the
 Google Cloud Natural Language API
 
@@ -23,8 +8,6 @@ https://cloud.google.com/natural-language/docs.
 
 import argparse
 import sys
-import json
-#import requests
 # [START beta_import]
 from google.cloud import language_v1beta2
 from google.cloud.language_v1beta2 import enums
@@ -167,7 +150,8 @@ def syntax_file(gcs_uri):
     # enums for our required json attributes.
     # part-of-speech tags from enums.PartOfSpeech.Tag
     
-    
+    # Mamoon created this enum to get dependency edge to process the 'done' and
+    # 'will do' problem but as of now. don't need this.
 #     edge = ('UNKNOWN','ABBREV','ACOMP','ADVCL','ADVMOD','AMOD','APPOS',
 #             'ATTR','AUX','AUXPASS','CC','CCOMP','CONJ','CONJ','CSUBJ',
 #             'CSUBJPASS','DEP','DET','DISCOURSE','DOBJ','EXPL','GOESWITH',
