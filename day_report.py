@@ -4,25 +4,15 @@ Created on Mon Aug 14 02:37:04 2017
 
 @author: transmatter
 
-this program takes text files for the standup report samples given by sir zia
-and creates a CSV file, tokenizes the sentences from those individual reports 
-and saves them to the individual txt files. which are then uploaded onto the
-gcloud storage manually, so they can be accessed by snippets.py
+i will code in the ability to save day report for one day in this file.
+following code has been copied from sentence.py, because that template suits
+the use-case best.
 """
 
 import os.path
 import logging
-#import csv
-from nltk.tokenize import sent_tokenize
 
-logging.basicConfig(
-    filename="test.log",
-    level=logging.DEBUG,
-    format="%(asctime)s:%(levelname)s:%(message)s"
-)
-
-DATA_PATH = 'E:/code/zia-nlp-task/v1beta2/standup-reports/'
-SAVE_PATH = 'E:/code/zia-nlp-task/v1beta2/standup-reports/sentences/'
+SENT_PATH = 'E:/code/zia-nlp-task/v1beta2/standup-reports/sentences/'
 
 def tokenize(current_text, user_id, report_part):
     

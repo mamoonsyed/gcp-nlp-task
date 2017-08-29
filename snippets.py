@@ -124,14 +124,14 @@ def syntax_text(text):
     # Detects syntax in the document. You can also analyze HTML with:
     #   document.type == enums.Document.Type.HTML
     tokens = client.analyze_syntax(document).tokens
-
+    return tokens
     # part-of-speech tags from enums.PartOfSpeech.Tag
-    pos_tag = ('UNKNOWN', 'ADJ', 'ADP', 'ADV', 'CONJ', 'DET', 'NOUN', 'NUM',
-               'PRON', 'PRT', 'PUNCT', 'VERB', 'X', 'AFFIX')
-
-    for token in tokens:
-        print(u'{}: {}'.format(pos_tag[token.part_of_speech.tag],
-                               token.text.content))
+#    pos_tag = ('UNKNOWN', 'ADJ', 'ADP', 'ADV', 'CONJ', 'DET', 'NOUN', 'NUM',
+#               'PRON', 'PRT', 'PUNCT', 'VERB', 'X', 'AFFIX')
+#
+#    for token in tokens:
+#        print(u'{}: {}'.format(pos_tag[token.part_of_speech.tag],
+#                               token.text.content))
 
 
 def syntax_file(gcs_uri):
@@ -141,8 +141,8 @@ def syntax_file(gcs_uri):
     # Instantiates a plain text document.
     document = types.Document(
         gcs_content_uri=gcs_uri,
-        type=enums.Document.Type.PLAIN_TEXT)
-
+        type=enums.Document.Type.PLAIN_TEXT
+    )
     # Detects syntax in the document. You can also analyze HTML with:
     #   document.type == enums.Document.Type.HTML
     tokens = client.analyze_syntax(document).tokens
@@ -163,40 +163,6 @@ def syntax_file(gcs_uri):
 #             'SUFFIX','TITLE','ADVPHMOD','AUXCAUS','AUXVV','DTMOD','FORIEGN',
 #             'KW','LIST','NOMC','NOMSUBJ','NOMSUBJPASS','NUMC','COP','COPULA')
 
-#    for token in tokens:
-        # result=json.loads(token)
-#        print(u'level 1')
-#        pos=json.loads(token.part_of_speech)
-#        if (pos_enum[token.part_of_speech.tag]=='VERB'):
-            # print('dependency edge label: ',toke['dependency_edge']['label'])
-#            print('tense of {} is: {}'.format(token.text.content,pos['tense']))
-
-
-            # print (u'{} is a dependency edge labelat(token.text.content))
-            # print (u'{} is a vverb tense:(token.text.content))
-            # print (dependency edge labele tense'.format(token.part_of_speech.tag))
-            # print (verb tense: tense'.format(token.part_of_speech.tag))
-            # print (u'{} is the dependency edge.'.format(token.dependency_edge.label))
-            
-            # dependency=token.dependency_edge
-            # pos=token.part_of_speech
-            # label=dependency.label
-            # tense=pos.tense
-#            print (label, tense)
-            # print('------------')
-            # print(token.part_of_speech)
-            # print(token.dependency_edge)
-
-            # if (edge =='ROOT' and tense=='PRESENT'):
-            #     print(u'{} IS THE ROOT AND IT IS PRESENT TENSE'.format(token.text.content))
-            # elif (edge =='ROOT' and tense=='PAST'):
-            #     print(u'{} IS THE ROOT AND IT IS PAST TENSE'.format(token.text.content))
-            # else:
-            #     continue
-#        else:
-#            continue
-        
-# [START def_entity_sentiment_text]
 def entity_sentiment_text(text):
     """Detects entity sentiment in the provided text."""
     # [START beta_client]
